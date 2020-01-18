@@ -1,0 +1,59 @@
+// main:../style.less
+
+.btn {
+    .padding_btn();
+
+    font-family: @heading_font;
+    font-size: @font-size-1;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.1;
+
+    border: 0;
+    cursor: pointer;
+    border-radius: 19px;
+    box-shadow: 0 0 9px @heading_color;
+
+    transition: background .3s linear;
+}
+
+.btn--regular {
+    color: #000;
+    
+    .btn(@heading_color, darken(@heading_color, 15%));
+}
+
+.btn--special { 
+    .btn(transparent, @heading_color);
+    color: #fff;
+
+    border: 2px solid #fff;
+}
+
+.btn--special:hover { 
+    color: #000;
+    border: 2px solid @heading_color;
+}
+
+.btn--form {
+    display: block;
+    margin: 25px auto 0;
+}
+
+
+
+/*Media*/
+/*Max-width: 770px*/
+@media (max-width: 770px) {
+    .btn {
+        font-size: 14px;
+    }
+}
+
+/*Max-width: 470px*/
+@media (max-width: 470px) {
+    .btn {
+        font-size: @footer_size;
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,189 @@
+// main:../style.less
+
+.projects__description {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.projects__content {
+    width: 45%;
+    padding-right: 125px;
+}
+
+.projects__text {
+    margin-bottom: 35px;
+}
+
+.projects__house {
+    width: 55%;
+    max-width: 718px;
+    height: 364px;
+    padding: 15px 35px;
+    background: url("@{img-path}/projects/projects-house-bg.png") center no-repeat;
+}
+
+.projects__name {
+    font-family: @heading_font;
+    font-weight: 900;
+    color: fade(white, 50%);
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.projects__name {
+    font-size: @font-size-8;
+}
+
+.projects__square {
+    margin-bottom: 15px;
+    font-family: @heading_font;
+    font-weight: 800;
+    color: @heading_color;
+}
+
+.projects__square {
+    font-size: @font-size-6;
+}
+
+.projects__rooms {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: @heading_font;
+    font-size: @font-size-1;
+}
+
+.projects__bathrooms,
+.projects__bedrooms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.projects__bedrooms {
+    margin-bottom: 45px;
+}
+
+.projects__bathrooms:before,
+.projects__bedrooms:before {
+    content: "";
+    display: block;
+    .size_icon_projects(); 
+    margin-right: 15px;
+
+    background-image: url("@{img-path}/projects/projects-sprite.png");
+    background-position: -1px 32px;
+}
+
+.projects__bathrooms:before {
+    content: "";
+    background-position: -1px 32px;
+}
+
+.projects__bedrooms:before {
+    content: "";
+    background-position: 35px 32px;
+}
+
+
+
+/*Media*/
+/*Max-width: 1200px*/
+@media (max-width: 1200px) {
+    .projects__content {
+        width: 30%;
+        padding-right: 20px;
+    }
+
+    .projects__house {
+        width: 65%;
+    }
+}
+
+/*Max-width: 1100px*/
+@media (max-width: 1100px) {
+    .projects__content {
+        width: 33%;
+    }
+
+    .projects__house {
+        width: 67%;
+    }
+}
+
+/*Max-width: 990px*/
+@media (max-width: 990px) {
+    .projects__content {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .projects__house {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/*Max-width: 575px*/
+@media (max-width: 575px) {
+    .projects__house {
+        background-size: contain;
+    }
+
+    .projects__name {
+        margin-right: 30px;
+        font-size: @font-size-7;
+    }
+
+    .projects__square {
+        font-size: @font-size-2;
+        margin-bottom: 5px;
+    }
+
+  
+    .projects__house {
+        height: 260px;
+        padding: 15px 35px;
+    }
+    
+    .projects__bathrooms {
+        margin-bottom: 10px;
+    }
+
+    .projects__bedrooms {
+        margin-bottom: 25px;
+    }
+}
+
+/*Max-width: 470px*/
+@media (max-width: 470px) {
+    .projects__name {
+        margin-top: 5px;
+        font-size: @font-size-5;
+    }
+
+    .projects__square {
+        font-size: @font-size-1;
+        margin-bottom: 10px;
+    }
+
+    .projects__house {
+        height: 205px;
+    }
+
+    .projects__rooms {
+        font-size: @footer_size;
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .projects__bedrooms {
+        margin-bottom: 25px;
+    } 
+}

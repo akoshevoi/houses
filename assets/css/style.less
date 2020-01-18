@@ -1,0 +1,114 @@
+// out: style.css
+
+body {
+    margin: 0;
+    font-size: @regular_size;
+    font-family: @regular_font;
+    color: @regular_color;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 35px 0; 
+}
+
+.section__header {
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 10;
+}
+
+.section__title {
+    font-family: @heading_font;
+    font-size: @heading_size;
+    font-weight: 600;
+    color: @heading_color;
+}
+
+.section__subtitle {
+    margin-top: 25px;
+}
+
+.section--about {
+    background-color: @bgc_of_blocks;
+}
+.section--projects {
+    background: url("@{img-path}/projects/projects-bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.section--contacts {
+    background: url("@{img-path}/contacts/contacts-bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.page {
+    overflow: hidden;
+}
+
+
+
+/*Media*/
+/*Max-width: 1200px*/
+@media (max-width: 1200px) {
+    .wrapper {
+        max-width: 1100px;
+    }
+}
+
+/*Max-width: 990px*/
+@media (max-width: 990px) {
+    .wrapper {
+        padding: 0 30px;
+    }
+}
+
+/*Max-width: 470px*/
+@media (max-width: 470px) {
+    .section__title {
+        font-size: @semi_heading_size;
+    }
+}
+
+
+
+
+//Vendor
+@import "slick/slick-slider";
+@import "slick/slider-dots";
+@import "slick/slick-intro";
+@import "slick/slick-about";
+@import "slick/slick-projects";
+
+
+//Blocks
+@import "vars";
+@import "mixins";
+@import "blocks/header";
+@import "blocks/intro";
+@import "blocks/btn";
+@import "blocks/about";
+@import "blocks/projects";
+@import "blocks/cards";
+@import "blocks/contacts";
+@import "blocks/footer";

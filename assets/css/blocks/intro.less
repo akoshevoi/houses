@@ -1,0 +1,89 @@
+//main:../style.less
+
+.intro {
+    height: 100vh;
+    min-height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro__slider {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.intro__slider-item {
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro__slider-item:focus {
+    outline: 0;
+}
+
+.intro__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    position: relative;
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.intro__text {
+    width: 100%;
+    max-width: 400px;
+    pointer-events: auto;
+}
+
+.intro__subtitle {
+    margin-bottom: 25px;
+    font-size: @regular_size;
+    font-weight: 400;
+}
+
+.intro__title {
+    margin-bottom: 15px;
+    font-family: @heading_font;
+    font-size: @heading_size;
+    font-weight: 600;
+}
+
+
+
+/*Media*/
+/*Max-width: 770px*/
+@media (max-width: 770px) {
+    .intro {
+        height: 60vh;
+        min-height: 550px;
+    }
+}
+
+/*Max-width: 470px*/
+@media (max-width: 470px) {
+    .intro {
+        min-height: 530px;
+    }
+
+    .intro__text {
+        max-width: 250px;
+    }
+
+    .intro__title {
+        font-size: @font-size-1;
+
+    }
+}

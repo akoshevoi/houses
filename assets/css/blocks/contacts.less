@@ -1,0 +1,168 @@
+// main:../style.less
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts__info {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts__location {
+    width: 50%;
+}
+
+.contacts__text {
+    width: 50%;
+}
+
+.contacts__list {
+    margin: 0;
+    padding: 30px 0;
+    list-style: none;
+}
+
+.contacts__item {
+    padding: 10px 0 0 35px;
+    position: relative;
+}
+
+.contacts__item:before {
+    content:"";
+    display: inline-block;
+    margin-right: 5px;
+    .size_icon_contacts();
+    
+    background-image: url("@{img-path}/contacts/contacts-sprite.png");
+    
+    position: relative;
+    top: 4px;  
+}
+
+.contacts__item--address, 
+.contacts__item--tell {
+    margin-bottom: 35px;
+}
+
+.contacts__item--address:before {
+    background-position: 0px 0px;
+}
+
+.contacts__item--tell:before {
+    background-position: 58px 0px;
+}
+
+.contacts__item--email:before {
+    background-position: 28px 0px;
+}
+
+.contacts__form {
+    width: 50%;
+    max-width: 440px;
+    padding: 30px;
+
+    background: fade(white, 20%);
+    border-radius: 40px;
+}
+
+.contacts__form__title {
+    font-family: @heading_font;
+    font-size: @font-size-1;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.form__group {
+    position: relative;
+    z-index: 2;
+}
+
+.form__input, 
+.form__tell {
+    padding: 5px 0;
+    width: 100%;
+    display: block;
+    color: @regular_color; 
+    background: none;  
+    border: 0;
+    border-bottom: 1px solid @regular_color;
+}
+
+.form__input:focus, 
+.form__tell:focus {
+    outline: 0;
+}
+
+.form__input {
+    margin-bottom: 25px;
+}
+
+.form__input::placeholder, 
+.form__tell::placeholder {
+    font-family: @regular_font;
+    font-size: @regular_size;
+    color: @regular_color;
+    opacity: 0.5;
+}
+
+
+
+/*Media*/
+/*Max-width: 990px*/
+@media (max-width: 990px) {
+    .contacts {
+        justify-content: space-between;
+    }
+
+    .contacts__info {
+        width: 60%;
+    }
+
+    .contacts__form {
+        width: 40%;
+    }
+}
+
+/*Max-width: 840px*/
+@media (max-width: 840px) {
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts__info {
+        width: 100%;
+        margin-bottom: 40px;
+
+        text-align: center;
+    }
+
+    .contacts__form {
+        width: 100%;
+    }
+
+    .contacts__location {
+        width: 100%;
+    }
+
+    .contacts__map {
+        margin: 0 auto;
+    }
+
+    .contacts__text {
+        width: 100%;
+    }
+}
+
+/*Max-width: 470px*/
+@media (max-width: 470px) {
+    .contacts__location,
+    .contacts__text {
+        width: 100%;
+    }
+}

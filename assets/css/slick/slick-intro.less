@@ -1,0 +1,72 @@
+// main: ../style.less
+
+.intro__slider .slick-list,
+.intro__slider .slick-track {
+    height: 100%;
+}
+
+.intro__slider .slick-dots {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.intro__slider .slick-dots {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    z-index: 1;
+}
+
+.intro__slider .slick-dots button {
+    cursor: pointer;
+}
+
+.intro__slider .slick-dots li:not(.slick-active) {
+    margin: 3px;
+}
+
+.intro__slider .slick-dots button {
+    display: block;
+    padding: 0;
+    margin: 8px;
+    width: 10px;
+    height: 10px;
+
+    font-size: 0;
+    color: transparent;
+
+    background-color: @heading_color;
+    border: 0;
+    border-radius: 50%;
+}
+
+.intro__slider .slick-dots button:focus {
+    outline: 0;
+}
+
+.intro__slider .slick-dots .slick-active  {
+    border: 2px solid @heading_color;
+    border-radius: 50%;
+}
+
+.intro__slider .slick-dots .slick-active button {
+    width: 12px;
+    height: 12px;
+}
+
+
+
+/*Media*/
+/*Max-width: 770px*/
+@media (max-width: 770px) {
+    .intro__slider .slick-dots {
+        top: 30%;
+    }
+}

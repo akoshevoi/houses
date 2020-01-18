@@ -1,0 +1,144 @@
+// main:../style.less
+
+.cards__name {
+    font-size: @font-size-7;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: @heading_font;
+    font-weight: 900;
+    color: fade(white, 50%);
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cards__square {
+    font-size: @font-size-5;
+    margin-bottom: 15px;
+    font-family: @heading_font;
+    font-weight: 800;
+    color: @heading_color;
+}
+
+.cards__rooms {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: @heading_font;
+    font-size: @font-size-1;
+}
+
+.cards__bathrooms, 
+.cards__bedrooms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.cards__bedrooms {
+    margin-bottom: 45px;
+}
+
+.cards__bathrooms:before, 
+.cards__bedrooms:before {
+    content: "";
+    display: block;
+    .size_icon_projects(); 
+    margin-right: 15px;
+
+    background-image: url("@{img-path}/projects/projects-sprite.png");
+    background-position: -1px 32px;
+}
+
+.cards__bathrooms:before {
+    content: "";
+    background-position: -1px 32px;
+}
+
+.cards__bedrooms:before {
+    content: "";
+    background-position: 35px 32px;
+}
+
+.cards__item {
+    width: 413px;
+    height: 364px;
+    margin: 0 auto;
+
+    border-radius: 40px;
+    cursor: pointer;
+
+    position: relative;
+    background: #000;
+}
+
+.cards__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    transition: opacity .2s linear;
+}
+
+.cards__item:hover .cards__img {
+    opacity: 0.5;
+}
+
+.cards__content {
+    width: 100%;
+    max-width: 413px;
+    height: 100%;
+    padding: 15px 35px;
+    position: relative;
+    z-index: 3;
+}
+.cards__hidden {
+    margin-left: 3px;
+}
+
+.cards__bathrooms .cards__hidden, 
+.cards__bedrooms .cards__hidden {
+    opacity: 0;
+    transition: opacity .5s linear;
+}
+
+.cards__item:hover .cards__bathrooms .cards__hidden,
+.cards__item:hover .cards__bedrooms .cards__hidden {
+    opacity: 1;
+}
+
+.cards__item:hover .projects__cards__mask {
+    opacity: .56;
+}
+
+
+/*Media*/
+/*Max-width: 470px*/
+@media (max-width: 470px) {
+    .cards__item {
+        width: 300px;
+        height: 264px;
+    }
+
+    .cards__img {
+        width: 300px;
+    }   
+
+    .cards__name {
+        font-size: @font-size-5;
+    }
+    
+    .cards__square {
+        font-size: @font-size-1;
+    }
+
+    .cards__content {
+        max-width: 300px;
+    }
+
+    .cards__bedrooms {
+        margin-bottom: 25px;
+    } 
+}

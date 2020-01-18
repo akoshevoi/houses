@@ -1,0 +1,80 @@
+// main:../style.less
+
+.cards__slider .slick-slider {
+    max-width: 1360px;
+    z-index: 3;
+}
+
+.cards__slider .slick-arrow {
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 6;
+}
+
+.cards__slider .slick-arrow:focus {
+    outline: 0;
+}
+
+.cards__slider .slick-arrow:after {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 38px;
+
+    border-top: 2px solid @regular_color;
+    border-right: 2px solid @regular_color;
+}
+
+.cards__item.slick-active {
+    outline: 0;
+}
+
+.slick-prev {
+    left: -7%;
+    transform: translateY(-50%) rotate(225deg);
+}
+
+.slick-next {
+    right: -5%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+
+
+/*Media*/
+/*Max-width: 1200px*/
+@media (max-width: 1200px) {
+    .slick-prev {
+        left: 2%;
+    }
+
+    .slick-next {
+        right: 2%;
+    }
+}
+
+/*Max-width: 470px*/
+@media (max-width: 470px) {
+    .cards__slider .slick-list {
+        margin: 0 0 0 15px;
+    }
+
+    .cards__slider .slick-arrow {
+        top: auto;
+        bottom: -30%;
+    }    
+    
+    .slick-prev {
+        left: 35%;
+    }
+
+    .slick-next {
+        right: 35%;
+    }
+}

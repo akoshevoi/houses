@@ -1,0 +1,142 @@
+// main:../style.less
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.about__description {
+    width: 40%;
+    max-width: 650px;
+}
+
+.about__content {
+    max-width: 450px;
+    border-bottom: 1px solid #707070;
+}
+
+.about__house {
+    width: 60%;
+    position: relative;
+}
+
+.about__title {
+    margin-top: 35px;
+    font-family: @heading_font;
+    font-size: @semi_heading_size;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about__text {
+    margin-bottom: 35px;
+}
+
+.about__features-item {
+    display: flex;
+    align-items: center;
+    color: @heading_color;
+}
+
+.about__wood {
+    width: 70%;
+    max-width: 129px;
+    height: 122px;
+
+    font-family: @heading_font;
+    font-size: @font-size-9;
+    font-weight: 600;
+    
+    text-align: center;
+    line-height: 1.7;
+
+    background-image: url("@{img-path}/about/wood.png");
+}
+
+.about__specification {
+    padding-left: 20px;
+}
+
+
+
+/*Media*/
+/*Max-width: 1200px*/
+@media (max-width: 1200px) {
+    .about__content {
+        padding-top: 0;
+    }
+
+    .about__specification {
+        font-size: @font-size-1;
+    }
+
+    .about__wood {
+        width: 145%;
+    }
+
+    .house__img {
+        width: 700px;
+    }
+
+}
+
+/*Max-width: 990px*/
+@media (max-width: 990px) {
+    .about__wood {
+        width: 200%;
+    }
+
+    .house__img {
+        width: 580px;
+    }
+}
+
+/*Max-width: 860px*/
+@media (max-width: 860px) {
+    .about__wood {
+        width: 300%;
+    }
+}
+
+/*Max-width: 770px*/
+@media (max-width: 770px) {
+    .about__description {
+        width: 100%;
+
+    }
+
+    .about__house {
+        width: 100%;
+    }
+
+    .about__content {
+        max-width: 750px;
+    }
+}
+
+/*Max-width: 470px*/
+@media (max-width: 470px) {
+    .house__img {
+        width: 420px;
+    }
+
+    .about__wood {
+        width: 100%;
+        
+        font-size: @font-size-7;
+        line-height: 2.2;
+
+        background-image: url("@{img-path}/about/wood-small.png");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .about__title {
+        font-size: @font-size-2;
+    }
+
+    .about__specification {
+        font-size: @footer_size;
+    }
+}
